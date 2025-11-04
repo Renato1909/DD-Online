@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cálculo de Idade</title>
+    
+    <link rel="stylesheet" href="idade.css">
+    
+</head>
+<body>
+   
+    <div class="container">
+        <!-- Div container para agrupar e centralizar o conteúdo -->
+        <h1>Cálculo de Idade</h1>
+        <!-- Título principal (Heading 1) -->
+        <p>Digite seu ano de nascimento para calcular sua idade atual:</p>
+        <!-- Parágrafo com instruções -->
+        
+        <div class="form-group">
+            <!-- Div para agrupar label e input -->
+            <label for="anoNascimento">Ano de Nascimento:</label>
+            <!-- Label associada ao input através do atributo "for" -->
+            <input type="number" id="anoNascimento" min="1900" max="2023" placeholder="Ex: 1990">
+            <!-- Input do tipo número com validações mínima/máxima e texto placeholder -->
+        </div>
+        
+        <button id="btnCalcular" class="btn">Calcular Idade</button>
+        <!-- Botão com ID para JavaScript e classe para CSS -->
+        
+        <div id="resultado" class="resultado"></div>
+        <!-- Div vazia onde o resultado será inserido via JavaScript -->
+    </div>
+    
+    <script src="idade.js"></script>
+    <!-- Vincula o arquivo JavaScript (no final para carregar após o HTML) -->
+</body>
+</html>

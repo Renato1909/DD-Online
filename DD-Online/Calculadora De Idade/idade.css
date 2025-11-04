@@ -1,0 +1,125 @@
+/* Reset básico - remove margens e paddings padrão dos navegadores */
+* {
+    margin: 0;          /* Remove margens de todos os elementos */
+    padding: 0;         /* Remove paddings de todos os elementos */
+    box-sizing: border-box; /* Faz padding e border serem incluídos na largura/altura */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Define a fonte principal com fallbacks */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Gradiente de fundo com direção 135 graus */
+    color: #333;        /* Cor do texto principal */
+    line-height: 1.6;   /* Altura da linha para melhor legibilidade */
+    padding: 20px;      /* Espaçamento interno */
+    min-height: 100vh;  /* Mínimo 100% da altura da viewport */
+    display: flex;      /* Ativa Flexbox */
+    align-items: center;/* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.container {
+    max-width: 500px;   /* Largura máxima do container */
+    width: 100%;        /* Largura de 100% até 500px */
+    background-color: white; /* Fundo branco */
+    padding: 40px;      /* Espaçamento interno grande */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra com deslocamento X, Y, blur e cor */
+    text-align: center; /* Alinha texto ao centro */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #2c3e50;     /* Cor azul escuro */
+    font-size: 2.2em;   /* Tamanho da fonte 2.2x o padrão */
+}
+
+p {
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+    color: #7f8c8d;     /* Cor cinza */
+    font-size: 1.1em;   /* Tamanho da fonte 1.1x o padrão */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Espaço abaixo do grupo de formulário */
+    text-align: left;    /* Alinha texto à esquerda */
+}
+
+label {
+    display: block;     /* Faz a label ocupar linha inteira */
+    margin-bottom: 8px; /* Espaço abaixo da label */
+    font-weight: bold;  /* Texto em negrito */
+    color: #2c3e50;     /* Cor azul escuro */
+}
+
+input[type="number"] {
+    width: 100%;        /* Largura total do container pai */
+    padding: 12px;      /* Espaçamento interno */
+    border: 2px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    font-size: 16px;    /* Tamanho de fonte legível */
+    transition: border-color 0.3s; /* Transição suave na cor da borda */
+}
+
+input[type="number"]:focus {
+    outline: none;      /* Remove contorno padrão do navegador */
+    border-color: #3498db; /* Muda cor da borda para azul quando em foco */
+}
+
+.btn {
+    width: 100%;        /* Largura total */
+    padding: 15px;      /* Espaçamento interno grande */
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    /* Gradiente azul */
+    color: white;       /* Texto branco */
+    border: none;       /* Remove borda padrão */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 18px;    /* Fonte grande */
+    font-weight: bold;  /* Texto em negrito */
+    cursor: pointer;    /* Muda cursor para mãozinha */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Anima transform e sombra */
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Move botão 2px para cima no hover */
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    /* Adiciona sombra azul no hover */
+}
+
+.btn:active {
+    transform: translateY(0); /* Volta à posição original quando clicado */
+}
+
+.resultado {
+    margin-top: 25px;   /* Espaço acima do resultado */
+    padding: 20px;      /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    text-align: center; /* Texto centralizado */
+    font-size: 20px;    /* Fonte grande */
+    font-weight: bold;  /* Texto em negrito */
+    min-height: 60px;   /* Altura mínima para manter layout */
+    display: flex;      /* Ativa Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    transition: all 0.3s ease; /* Transição suave em todas as propriedades */
+}
+
+/* Media Query para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px; /* Menos padding em telas pequenas */
+        margin: 10px;       /* Margem pequena */
+    }
+    
+    h1 {
+        font-size: 1.8em;   /* Fonte menor em telas pequenas */
+    }
+    
+    body {
+        padding: 10px;      /* Menos padding no body */
+    }
+}
